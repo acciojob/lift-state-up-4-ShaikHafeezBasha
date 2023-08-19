@@ -19,12 +19,14 @@ const App = () => {
   }
   return (
     <div className="parent">
-      <h1>Parent Component</h1>
-      <label for="itemName">Item Name</label>
-      <input type="text" id="itemName" onChange={(e) => setItemName(e.target.value)} value={itemName} />
-      <label for="itemPrice">Item Price</label>
-      <input type="number" id="itemPrice" onChange={(e) => setItemPrice(parseInt(e.target.value))} value={itemPrice} />
-      <button onClick={update}>Add Item</button>
+      <div>
+        <h1>Parent Component</h1>
+        <label for="itemName">Item Name</label>
+        <input type="text" id="itemName" onChange={(e) => setItemName(e.target.value)} value={itemName} />
+        <label for="itemPrice">Item Price</label>
+        <input type="number" id="itemPrice" onChange={(e) => setItemPrice(parseInt(e.target.value))} value={itemPrice} />
+        <button onClick={update}>Add Item</button>
+      </div>
       <Child cartItems={cartItems} setCartItems={setCartItems} />
     </div>
   )

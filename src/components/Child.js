@@ -12,9 +12,12 @@ const Child = ({ cartItems, setCartItems }) => {
             <h1>Child Component</h1>
             <ul>
                 {cartItems.map((item, index) => (
-                    <><li key={index}>
-                        {item.name}-${item.price}
-                    </li><button onClick={handleRemove}>Remove</button></>
+                    <div>
+                        <li key={index}>
+                            {item.name}-${item.price}
+                        </li>
+                        <button onClick={handleRemove}>Remove</button>
+                    </div>
                 ))}
             </ul>
         </div>
